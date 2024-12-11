@@ -72,9 +72,9 @@
 }
 
 
-/* .carrousel:hover img{
-    transform: scale(1.1);
-} */
+.carrousel:hover img{
+    scale: 1.1;
+}
 
 
 .pictureSelector{

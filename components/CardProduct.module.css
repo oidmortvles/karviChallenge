@@ -85,15 +85,15 @@
 
 .price{
     font-size: x-large;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--color2);
-    line-height: 1rem;
 }
 
 
 .city{
     font-weight: 500;
     opacity: .5;
+    font-size: small;
 }
 
 
