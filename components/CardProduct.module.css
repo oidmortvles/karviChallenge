@@ -1,0 +1,151 @@
+.cardProduct{
+    width: 100%;
+    background-color: var(--white);
+    border-radius: var(--border);
+    padding: .5rem .5rem 1rem .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .5rem; 
+    box-shadow: 0 20px 20px #c1bfbf99;  
+}
+
+
+.dataSection{
+    width: 100%;
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .5rem;
+}
+
+
+.yearAndKm{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+
+.yearAndKm span{
+    white-space: nowrap;
+    background-color: #ebecf5;
+    padding-inline: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: small;
+    border-radius: 1rem;
+}
+
+
+
+.modelAndDetails{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.model{
+    font-weight: bold;
+    font-size: larger;
+    line-height: normal;
+}
+
+
+.detailsDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.details{
+    font-weight: 400;
+    font-size: medium;
+    line-height: 1rem;
+}
+
+
+.priceAndCity{
+    margin-top: 1rem;
+}
+
+
+.price{
+    font-size: x-large;
+    font-weight: 400;
+    color: var(--color2);
+    line-height: 1rem;
+}
+
+
+.city{
+    font-weight: 500;
+    opacity: .5;
+}
+
+
+
+@media only screen and (max-width: 850px){
+    .cardProduct{
+        padding: 1rem 0rem;
+        flex-direction: row;
+        box-shadow:none;
+        border-radius: 0rem;
+        border-bottom: thin solid #c1bfbf99;
+        display: flex;
+        align-items: center;
+    }
+
+    .dataSection{
+        padding: 0rem;
+        gap: 0rem;
+        height: 100%;
+        justify-content: flex-start;
+    }
+
+
+    .priceAndCity{    height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+
+    .detailsDiv{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+
+    .yearAndKm span{
+        font-size: x-small;
+    }
+
+
+    .model{
+        font-size: medium;
+    }
+
+
+    .details, .city{
+        font-size: small;
+    }
+
+
+}

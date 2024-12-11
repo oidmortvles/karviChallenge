@@ -1,0 +1,29 @@
+.buttonFilter{
+    min-width: 15em;
+    padding-inline: .5em;
+    border: none;
+    background-color: #0000;
+    color: var(--color1);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    transition: .3s ease-out;
+}
+
+
+.buttonFilter svg{
+    fill:var(--color1);
+    transition: .3s ease-out;
+}
+
+
+.buttonFilter:hover{
+    color: var(--color2);
+    svg{
+        fill: var(--color2);
+    }
+}
+
+

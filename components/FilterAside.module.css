@@ -1,0 +1,16 @@
+.filterAside{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 850px){
+    .filterAside{
+        display: none;
+    }
+}

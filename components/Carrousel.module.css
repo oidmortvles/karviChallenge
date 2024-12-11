@@ -1,0 +1,110 @@
+.carrousel{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: var(--border);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.buttonLike{
+    width: 2rem;
+    height: 2rem;
+    padding: .5rem;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebecf5;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+    transition: .3s ease-out;
+}
+
+
+.buttonLike svg{
+    transition: .3s ease-out;
+}
+
+
+.buttonLike:hover{
+    background-color: var(--color1);
+    svg{
+        fill: var(--white);
+    }
+}
+
+
+.buttonLikeActive{
+    width: 2rem;
+    height: 2rem;
+    padding: .5rem;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorAction);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+    transition: .3s ease-out;
+}
+
+
+.buttonLikeActive svg{
+    fill: var(--white);
+}
+
+
+.carrousel img{
+    border-radius: var(--border);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s ease-out;
+}
+
+
+/* .carrousel:hover img{
+    transform: scale(1.1);
+} */
+
+
+.pictureSelector{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+
+.pictureSelector span{
+    width: .5rem;
+    height: .5rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--white);
+    opacity: .5;
+}
+
+
+@media only screen and (max-width: 850px){
+    .carrousel{
+        height: 100%;
+    }
+
+    .carrousel img{
+        height: 100%;
+        object-fit: cover;
+    }
+}
