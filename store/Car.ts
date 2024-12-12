@@ -7,4 +7,5 @@ export interface Car {
     version:string;
     price:number;
     mileage:number;
+    favourite?:boolean;
 }

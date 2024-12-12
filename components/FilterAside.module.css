@@ -8,6 +8,50 @@
 }
 
 
+.favouriteContainer{
+    width: 100%;
+    min-height: 3rem;
+    overflow: hidden;
+    border: none;
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;    
+}
+
+
+.favs{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    color: var(--color1);
+    padding: 0rem .3rem;
+    border: thin solid var(--color1);
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: smaller;
+    transition: .3s ease-out;
+}
+
+
+.favs svg{
+    fill: var(--color1);
+    transition: .3s ease-out;
+}
+
+.favs:hover{
+    color: var(--color2);
+    border-color: var(--color2);
+}
+
+.favs:hover svg{
+    fill: var(--color2);
+}
+
+
 
 @media only screen and (max-width: 850px){
     .filterAside{

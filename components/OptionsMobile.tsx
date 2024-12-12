@@ -3,13 +3,27 @@ import { useState } from 'react';
 import ButtonFilter from './ButtonFilter';
 import styles from './OptionsMobile.module.css';
 import SearchBar from './SearchBar';
+import BoxFilter from './BoxFilter';
+import { AvaibleFilter } from '@/store/AvaibleFilters';
 
-const OptionsMobile : React.FC = () =>{
 
-    const[barSearch,setBarSearch] = useState(false);
+interface OptionsMobileProps{
+    filter:AvaibleFilter;
+}
+
+const OptionsMobile : React.FC <OptionsMobileProps> = ({filter}) =>{
+
+    const [barSearch,setBarSearch] = useState(false);
+    const [boxFilter,setBoxFilter] = useState(false);
 
     const busqueda = () =>{
-        setBarSearch(!barSearch)
+        setBoxFilter(false);
+        setBarSearch(!barSearch);
+    }
+
+    const filtrado = () =>{
+        setBarSearch(false);
+        setBoxFilter(!boxFilter);
     }
 
     const searchSvg =
@@ -27,10 +41,12 @@ const OptionsMobile : React.FC = () =>{
         <>
             <nav className={styles.optionsMobile}>
                 <ButtonFilter svg={searchSvg} text='Buscar' fn={busqueda}/>
-                <ButtonFilter svg={filterSvg} text='Filtrar'/>
+                <span className={styles.separator}></span>
+                <ButtonFilter svg={filterSvg} text='Filtrar' fn={filtrado}/>
             </nav>
 
             {barSearch && <SearchBar/>}
+            {boxFilter && <BoxFilter filter={filter}/>}
         </>
     )
 }

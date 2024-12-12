@@ -8,13 +8,15 @@ import SearchDetails from "./SearchDetails";
 import Pagination from "./Pagination";
 import SearchDetailsMobile from "./SearchDetailsMobile";
 import OptionsMobile from "./OptionsMobile";
+import { AvaibleFilter } from "@/store/AvaibleFilters";
 
 interface CardContainerProps {
   cars: Car[];
+  filter:AvaibleFilter;
 }
 
 
-const CardContainer: React.FC<CardContainerProps> = ({ cars }) => {
+const CardContainer: React.FC<CardContainerProps> = ({ cars, filter }) => {
   const { collectionFilter,strict } = useFilter();
   const [filteredCars, setFilteredCars] = useState<Car[]>(cars);
   const [currentPage, setCurrentPage] = useState(1);
@@ -65,7 +67,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ cars }) => {
         <SearchDetails cars={filteredCars} fn={minorPrice} />
         
         {/* MOBILE */}
-        <OptionsMobile/>
+        <OptionsMobile filter={filter}/>
         <SearchDetailsMobile cars={filteredCars} fn={minorPrice}/>
         {/* MOBILE */}
 

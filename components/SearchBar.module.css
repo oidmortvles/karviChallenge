@@ -12,10 +12,10 @@
 .bar{
     width: 100%;
     border: none;
-    background-color: var(--grey);
-    color: var(--white);
+    background-color: transparent;
     padding: .5rem;
     border-radius: var(--border);
+    border: thin solid var(--color1);
 }
 
 

@@ -10,12 +10,14 @@ export default async function Home() {
   
   return (
     <main className={styles.home}>
-      <FilterAside filter={carsData.availableFilters}/>
       
+      <FilterAside filter={carsData.availableFilters}/>
+
       <section className={styles.list}>
         <FilterHeader/>        
-        <CardContainer cars={carsData.items}/>
+        <CardContainer cars={carsData.items} filter={carsData.availableFilters}/>
       </section>
+
     </main>
     
   );

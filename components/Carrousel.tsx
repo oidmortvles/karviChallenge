@@ -1,13 +1,22 @@
 "use client"
 import { useState } from 'react';
 import styles from './Carrousel.module.css';
+import { useFav } from '@/store/Favourites';
+import { type Car } from '@/store/Car';
 
-const Carrousel : React.FC = () =>{
+
+interface CarrouselProps{
+    car:Car
+}
+
+const Carrousel : React.FC <CarrouselProps> = ({car}) =>{
 
     const [like,setLike] = useState (false);
+    const {addFav,deleteFav} = useFav();
     
     const likear = () =>{
-        setLike(!like)
+        setLike(!like);
+        like ? deleteFav(car) : addFav(car);
     }
 
     return(

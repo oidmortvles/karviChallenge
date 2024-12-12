@@ -13,6 +13,7 @@
     font-weight: 400;
     font-size: small;
     color: var(--grey);
+    text-wrap-mode: nowrap;
 }
 
 
@@ -21,5 +22,14 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .aviso{
+        font-size: small;
+        line-height: 1rem;
+        text-align: center;
+        text-wrap-mode: wrap;
+        text-wrap-style: balance;
+        margin-top: 1rem;
     }
 }

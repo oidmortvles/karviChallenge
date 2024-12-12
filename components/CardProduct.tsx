@@ -11,7 +11,7 @@ interface CardProductProps{
 const CardProduct : React.FC <CardProductProps> = ({car}) =>{
     return(
         <figure className={styles.cardProduct}>
-            <Carrousel/>
+            <Carrousel car={car}/>
 
             <section className={styles.dataSection}>
                 

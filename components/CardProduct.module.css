@@ -1,5 +1,6 @@
 .cardProduct{
     width: 100%;
+    max-width: 22rem;
     background-color: var(--white);
     border-radius: var(--border);
     padding: .5rem .5rem 1rem .5rem;
