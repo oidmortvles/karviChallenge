@@ -16,7 +16,11 @@ const Carrousel : React.FC <CarrouselProps> = ({car}) =>{
     
     const likear = () =>{
         setLike(!like);
-        like ? deleteFav(car) : addFav(car);
+        if(like){
+            deleteFav(car)
+        }else{
+            addFav(car)
+        }
     }
 
     return(
