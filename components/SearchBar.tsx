@@ -12,7 +12,7 @@ const SearchBar : React.FC = () =>{
         falseStrict();
         const value = e.target.value;
         if (value.length >= 3){
-            addItem(value);
+            addItem(value.toLowerCase());
         }
         else{
             clearCollection();
