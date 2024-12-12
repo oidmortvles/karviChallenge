@@ -5,27 +5,28 @@ export const useFilter = create<FilterControl> ((set)=>{
     return{
         category:"",
         item:"",
-        collectionFilter:[],
-
-        addItem: () =>
-            set((state) => ({
-                collectionFilter: [
-                    ...state.collectionFilter,
-                    { item: state.item},
-                ],
-            })),
-
-
-        deleteItem: (itemToDelete: string) =>
-        set((state) => ({
-            collectionFilter: state.collectionFilter.filter(
-                (filter) => filter.item !== itemToDelete 
-            ),
-        })),        
+        collectionFilter: new Set(),
+        
+        
+        addItem: (newItem: string | number) =>
+            set((state) => {
+                const newCollection = new Set(state.collectionFilter);
+                newCollection.add(newItem); // Agrega el nuevo ítem, descartando duplicados automáticamente
+                return { collectionFilter: newCollection };
+            }),
 
 
-        clearCollection: () => set(()=>({
-            collectionFilter: [],
-        }))
+        deleteItem: (itemToDelete: string | number) =>
+            set((state) => {
+                const newCollection = new Set(state.collectionFilter);
+                newCollection.delete(itemToDelete); // Elimina el ítem si existe
+                return { collectionFilter: newCollection };
+            }),        
+
+        
+        clearCollection: () =>
+            set(() => ({
+                collectionFilter: new Set(),
+            }))
     }
 })

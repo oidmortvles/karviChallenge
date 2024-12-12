@@ -2,9 +2,9 @@ export interface FilterControl {
     
     category: string;
     item: string | number;
-    collectionFilter: { item: string | number }[];
-    addItem: () => void;
-    deleteItem: (itemToDelete: string) => void;
+    collectionFilter: Set<string | number>;
+    addItem: (newItem: string | number) => void;
+    deleteItem: (itemToDelete: string | number) => void;
     clearCollection: () => void;
     
 }

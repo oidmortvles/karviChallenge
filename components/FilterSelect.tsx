@@ -11,9 +11,8 @@ const FilterSelect : React.FC <FilterSelectProps> = ({text}) =>{
     const {addItem} = useFilter();
 
     const selectFilter = () =>{
-        console.log(text)
+        addItem(text);
     }
-
 
     return(
         <button className={styles.filterSelect} onClick={selectFilter}>

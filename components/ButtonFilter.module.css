@@ -1,6 +1,5 @@
 .buttonFilter{
-    min-width: 15em;
-    padding-inline: .5em;
+    min-width:  fit-content;
     border: none;
     background-color: #0000;
     color: var(--color1);

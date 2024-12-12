@@ -1,6 +1,6 @@
-.searchDetails{
+.searchDetailsMobile{
     width: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
 }
@@ -13,7 +13,7 @@
 
 
 @media only screen and (max-width: 850px){
-    .searchDetails{
-        display: none;
+    .searchDetailsMobile{
+        display: flex;
     }
 }
