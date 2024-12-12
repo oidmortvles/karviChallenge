@@ -1,0 +1,32 @@
+.searchBar{
+    width: 100%;
+    min-height: 3rem;
+    border: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem .5rem;
+}
+
+
+.bar{
+    width: 100%;
+    border: none;
+    background-color: var(--grey);
+    color: var(--white);
+    padding: .5rem;
+    border-radius: var(--border);
+}
+
+
+.bar:focus, .bar:hover{
+    outline: none;
+}
+
+
+
+@media only screen and (max-width: 850px){
+    .searchBar{
+        display: flex;
+    }
+}

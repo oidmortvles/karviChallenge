@@ -26,17 +26,18 @@
     transition: .3s ease-out;
 }
 
-
-.buttonLike svg{
+.icon{
     transition: .3s ease-out;
 }
 
 
 .buttonLike:hover{
     background-color: var(--color1);
-    svg{
-        fill: var(--white);
-    }
+}
+
+
+.buttonLike:hover .icon {
+    fill: var(--white);
 }
 
 
@@ -58,7 +59,7 @@
 }
 
 
-.buttonLikeActive svg{
+.buttonLikeActive .icon{
     fill: var(--white);
 }
 

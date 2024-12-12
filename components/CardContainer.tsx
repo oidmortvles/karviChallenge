@@ -15,7 +15,7 @@ interface CardContainerProps {
 
 
 const CardContainer: React.FC<CardContainerProps> = ({ cars }) => {
-  const { collectionFilter } = useFilter();
+  const { collectionFilter,strict } = useFilter();
   const [filteredCars, setFilteredCars] = useState<Car[]>(cars);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -26,16 +26,21 @@ const CardContainer: React.FC<CardContainerProps> = ({ cars }) => {
     if (collectionFilter.size === 0) {
       setFilteredCars(cars);
     } else {
-      setFilteredCars(
-        cars.filter((car) =>
+      setFilteredCars(cars.filter((car) =>
           Array.from(collectionFilter).every((filterItem) =>
-            Object.values(car).includes(filterItem)
+            strict ? 
+            Object.values(car).includes(filterItem) 
+            :
+            //COINCIDENCIA PARCIAL PARA BUSQUEDA EN MOBILE
+            Object.values(car).some((value) =>
+              value.toString().toLowerCase().includes(filterItem.toString()) 
+            ) 
           )
         )
       );
     }
     setCurrentPage(1);
-  }, [collectionFilter, cars]);
+  }, [collectionFilter, cars, strict]);
 
 
   //CONTROLA LOS ITEMS MOSTRADOS

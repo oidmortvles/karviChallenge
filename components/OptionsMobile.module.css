@@ -1,6 +1,14 @@
 .optionsMobile{
     width: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-around;
+}
+
+
+
+@media only screen and (max-width: 850px){
+    .optionsMobile{
+        display: flex;
+    }
 }

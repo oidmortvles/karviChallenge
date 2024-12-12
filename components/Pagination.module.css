@@ -21,16 +21,18 @@
 }
 
 
-.buttonPagination svg{
+.icon{
     transition: fill .3s ease-out;
 }
 
 
 .buttonPagination:hover{
     color:var(--color1);
-    svg{
-        fill:var(--color1);
-    }
+}
+
+
+.buttonPagination:hover .icon {
+    fill:var(--color1);
 }
 
 

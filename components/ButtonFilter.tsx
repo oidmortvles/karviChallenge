@@ -10,7 +10,7 @@ interface ButtonFilterProps{
 const ButtonFilter : React.FC<ButtonFilterProps> = ({svg,text,fn}) =>{
     return(
         <button onClick={fn} className={styles.buttonFilter}>
-            {svg}
+            {svg && <span className={styles.icon}>{svg}</span>}
             {text}
         </button>
     )

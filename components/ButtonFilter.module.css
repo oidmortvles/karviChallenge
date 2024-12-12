@@ -12,7 +12,7 @@
 }
 
 
-.buttonFilter svg{
+.icon svg{
     fill:var(--color1);
     transition: .3s ease-out;
 }
@@ -20,9 +20,10 @@
 
 .buttonFilter:hover{
     color: var(--color2);
-    svg{
-        fill: var(--color2);
-    }
+}
+
+.buttonFilter:hover .icon svg{
+    fill: var(--color2);
 }
 
 

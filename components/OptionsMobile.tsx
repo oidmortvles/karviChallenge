@@ -1,7 +1,16 @@
+"use client"
+import { useState } from 'react';
 import ButtonFilter from './ButtonFilter';
 import styles from './OptionsMobile.module.css';
+import SearchBar from './SearchBar';
 
 const OptionsMobile : React.FC = () =>{
+
+    const[barSearch,setBarSearch] = useState(false);
+
+    const busqueda = () =>{
+        setBarSearch(!barSearch)
+    }
 
     const searchSvg =
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
@@ -15,10 +24,14 @@ const OptionsMobile : React.FC = () =>{
 
 
     return(
-        <nav className={styles.optionsMobile}>
-            <ButtonFilter svg={searchSvg} text='Buscar'/>
-            <ButtonFilter svg={filterSvg} text='Filtrar'/>
-        </nav>
+        <>
+            <nav className={styles.optionsMobile}>
+                <ButtonFilter svg={searchSvg} text='Buscar' fn={busqueda}/>
+                <ButtonFilter svg={filterSvg} text='Filtrar'/>
+            </nav>
+
+            {barSearch && <SearchBar/>}
+        </>
     )
 }
 
